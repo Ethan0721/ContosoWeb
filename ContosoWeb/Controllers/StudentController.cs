@@ -16,11 +16,7 @@ namespace ContosoWeb.Controllers
             _ss = ss;
         }
         public ActionResult Index()
-        {
-            //ContosoDbContext context = new ContosoDbContext();
-            //StudentRepository sr = new StudentRepository(context);
-            //StudentServices studentService = new StudentServices(sr);
-            
+        {   
             var students = _ss.GetStudents();
             return View(students);
         }

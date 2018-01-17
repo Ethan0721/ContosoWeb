@@ -52,7 +52,7 @@ namespace Contoso.App_Start
 
                 RegisterServices(kernel);
                 return kernel;
-                //gugiu
+                //gugiu gg
             }
             catch
             {
