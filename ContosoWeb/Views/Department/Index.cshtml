@@ -17,21 +17,12 @@
         <th>
             @Html.DisplayNameFor(model => model.Budget)
         </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.StartDate)
+        <th>
+            @Html.DisplayNameFor(model => model.Courses)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CreatedDate)
+           CourseId
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UpdatedDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedBy)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UpdatedBy)
-        </th>*@
         <th></th>
     </tr>
 
@@ -43,21 +34,19 @@
         <td>
             @Html.DisplayFor(modelItem => item.Budget)
         </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.StartDate)
+
+        <td>
+            @foreach (var c in item.Courses)
+            {
+               @Html.DisplayFor(modelItem => c.Title)
+            }
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.CreatedDate)
+            @foreach (var c in item.Courses)
+            {
+                @Html.DisplayFor(modelItem => c.Id)
+            }
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UpdatedDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreatedBy)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UpdatedBy)
-        </td>*@
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
             @Html.ActionLink("Details", "Details", new { id=item.Id }) |

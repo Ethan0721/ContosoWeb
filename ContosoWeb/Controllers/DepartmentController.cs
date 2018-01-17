@@ -17,8 +17,10 @@ namespace ContosoWeb.Controllers
         }
         public ActionResult Index()
         {
-            var departments = _ds.GetAllDepartments();
+            var departments = _ds.GetCourse();
+            //ViewBag.totalCourses = departments;
             return View(departments);
+            //return View();
         }
 
         // GET: Department/Details/5

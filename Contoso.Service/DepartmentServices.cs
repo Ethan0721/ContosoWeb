@@ -25,10 +25,16 @@ namespace Contoso.Service
         {
             return _departmentRepository.GetCourse();
         }
+
+        public List<Department> GetCourse()
+        {
+            return _departmentRepository.GetCourse();
+        }
     }
     public interface IDepartmentService {
         IEnumerable<Department> GetAllDepartments();
         //Department GetDepartmentByName(string name);
         IEnumerable<Department> GetAllDepartmentsWithCourses();
+        List<Department> GetCourse();
     }
 }

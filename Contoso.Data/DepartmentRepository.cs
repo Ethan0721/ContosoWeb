@@ -21,7 +21,7 @@ namespace Contoso.Data
 
         public List<Department> GetCourse( )
         {
-            return _context.Departments.Include("Course").ToList();   
+            return _context.Departments.Include("Courses").ToList();   
         }
     }
     public interface IDepartmentRepository : IRepository<Department>
